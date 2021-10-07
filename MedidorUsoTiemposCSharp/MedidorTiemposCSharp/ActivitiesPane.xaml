@@ -1,0 +1,35 @@
+﻿<Page x:Class="MedidorTiemposCSharp.ActivitiesPane"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedidorTiemposCSharp"
+      mc:Ignorable="d" 
+      d:DesignHeight="280" d:DesignWidth="420"
+      Title="Actividades">
+
+    <DockPanel>
+        <Expander x:Name="FiltersPna" Header="Filtering" DockPanel.Dock="Bottom">
+            <Frame Source="FiltersPane.xaml"/>
+        </Expander>
+        <Expander x:Name="NewActivityPane" Header="New activity" DockPanel.Dock="Bottom">
+            <Frame Source="NewActiviryPane.xaml"/>
+        </Expander>
+        <ListView x:Name="ActivityList" DockPanel.Dock="Bottom" SelectionChanged="ActivityList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Actividad" Width="80"
+                                    DisplayMemberBinding="{Binding rowNumber}"/>
+                    <GridViewColumn Header="Inicio" Width="80"
+                                    DisplayMemberBinding="{Binding rowNumber}"/>
+                    <GridViewColumn Header="Fin" Width="80"
+                                    DisplayMemberBinding="{Binding rowNumber}"/>
+                    <GridViewColumn Header="Pordentaje" Width="80" 
+                                    DisplayMemberBinding="{Binding rowNumber}"/>
+                    <GridViewColumn Header="Etiqueta" Width="80" 
+                                    DisplayMemberBinding="{Binding rowNumber}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Page>

@@ -1,0 +1,54 @@
+﻿<Application x:Class="MedidorTiemposCSharp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MedidorTiemposCSharp"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="BigBoldFont">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Key="BigButton" TargetType="Button" BasedOn="{StaticResource ResourceKey=BigBoldFont}">
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+        <Style x:Key="BigButtonActive" TargetType="Button" BasedOn="{StaticResource ResourceKey=BigBoldFont}">
+            <Setter Property="Background" Value="#FFBEE6FD"/>
+            <!--Setter Property="Background" Value="{StaticResource DefaultButton}"/-->
+            <Setter Property="BorderBrush" Value="#FF3C7FB1"/>
+        </Style>
+        <GridLength x:Key="NotificationHeightBar">60</GridLength>
+        <Border x:Key="RoundBorder" Background="#90000000" Visibility="{Binding Visibility}">
+            <Border BorderBrush="Black" BorderThickness="1" Background="AliceBlue" 
+                CornerRadius="10,0,10,0" VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                <Border.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" 
+                  Opacity="0.5" Direction="270" 
+                  ShadowDepth="0.7" />
+                </Border.BitmapEffect>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="MessageTextBlock" 
+                    Text="{Binding Message}" 
+                    TextWrapping="Wrap" Margin="5" />
+                    <UniformGrid Grid.Row="1" Margin="5" 
+                          Columns="2" HorizontalAlignment="Center"
+                          VerticalAlignment="Bottom">
+                        <Button x:Name="OkButton"  
+                          Content="Ok" Margin="2"  />
+                        <Button x:Name="CancelButton" 
+
+                          Content="Cancel" Margin="2" />
+                    </UniformGrid>
+                </Grid>
+            </Border>
+        </Border>
+        <Style x:Key="InnerMargin">
+            <Setter Property="FrameworkElement.Margin" Value="7 5"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

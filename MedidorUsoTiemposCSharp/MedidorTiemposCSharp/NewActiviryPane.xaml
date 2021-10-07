@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="MedidorTiemposCSharp.NewActivityPane"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:MedidorTiemposCSharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="420">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_Nombre"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_fechaInicio"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_horaInicio"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_fechaFin"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_horaFin"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource InnerMargin}">
+            <xctk:ByteUpDown x:Name="bud_porcentaje" Value="100" Maximum="100" Minimum="0" Increment="1"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource InnerMargin}">
+            <TextBox x:Name="tb_duracion"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource InnerMargin}">
+            <RichTextBox x:Name="rtb_etiquetas" IsReadOnly="True" GotFocus="rtb_etiquetas_GotFocus"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Stretch"
+                    Style="{StaticResource InnerMargin}">
+            <Button Content="Crear"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Stretch"
+                    Style="{StaticResource InnerMargin}">
+            <Button Content="Cancelar"/>
+        </Grid>
+    </Grid>
+</UserControl>

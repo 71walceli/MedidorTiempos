@@ -1,0 +1,41 @@
+﻿<Window x:Class="MedidorTiemposCSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedidorTiemposCSharp"
+        mc:Ignorable="d"
+        Title="Medidor Uso Tiempo" MinHeight="380" MinWidth="420">
+    <DockPanel>
+        <Grid DockPanel.Dock="Bottom" Height="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Actividades" x:Name="ActivitiesPaneButton"
+                    Style="{StaticResource BigButton}" Click="ActivitiesButton_Click"/>
+            <Button Grid.Column="1" Content="Gráficas" x:Name="GraphsPaneButton"
+                    Style="{StaticResource BigButton}" Click="GraphicsButton_Click"/>
+            <Button Grid.Column="2" x:Name="PaneMenuButton" Content="☰"
+                    Style="{StaticResource BigButton}" Click="PaneMenuButton_Click"/>
+        </Grid>
+        <DockPanel>
+            <StackPanel x:Name="NotificationPane" DockPanel.Dock="Top"/>
+            <Grid>
+                <Frame x:Name="ContentPane" Panel.ZIndex="1" Source="ActivitiesPane.xaml"/>
+                <Grid x:Name="PaneMenu" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="150" 
+                      Panel.ZIndex="2" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" x:Name="TagsPaneButton" Content="Etiquetas"
+                        Style="{StaticResource BigButton}" Click="TagsButton_Click"/>
+                    <Button Grid.Row="1" x:Name="BackupsPaneButton" Content="Copias de seguridad"
+                        Style="{StaticResource BigButton}" Click="ExportsButton_Click"/>
+                </Grid>
+            </Grid>
+        </DockPanel>
+    </DockPanel>
+</Window>

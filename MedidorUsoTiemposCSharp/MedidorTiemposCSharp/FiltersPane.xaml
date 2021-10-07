@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="MedidorTiemposCSharp.FiltersPane"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:MedidorTiemposCSharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="420">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource InnerMargin}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" x:Name="Nombre_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                <TextBox Grid.Column="12" x:Name="Nombre_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="inicio_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="inicio_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="fin_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="fin_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="duracionMinima_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="duracionMinima_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="duracionMaxima_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="duracionMaxima_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="PorcentajeMinimo_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="PorcentajeMinimo_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="PorcentajeMaximo_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="PorcentajeMaximo_Tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource InnerMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" x:Name="Etiquetas_cb" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="12" x:Name="Etiquetas_tb" HorizontalAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</UserControl>
